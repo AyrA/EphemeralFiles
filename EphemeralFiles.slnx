@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="EphemeralFiles/EphemeralFiles.csproj" />
+  <Project Path="Tests/Tests.csproj" Id="e062b43d-3407-46a5-b839-04481b1bdc42" />
+</Solution>
