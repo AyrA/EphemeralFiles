@@ -2,7 +2,7 @@
 
 This is a .NET library for ephemeral files.
 
-Files that are marked as ephemeral are cleaned up even if the application or the system crashes.
+Files that are marked as ephemeral are cleaned up even if the application crashes.
 
 ## Usage
 
@@ -40,3 +40,11 @@ Be careful when you hold onto handles or pass them around, because the old handl
 ## Disposing
 
 If you dispose of the stream and the file is currently not ephemeral it will stay on disk.
+
+## System crash
+
+If the system itself crashes, there is no guarantee that the ephemeral file will be cleaned up,
+or when it happens.
+Most operating systems will free any remaining allocated blocks during the next file system scan.
+
+Therefore I recommend you run a file system check after a system crash.
